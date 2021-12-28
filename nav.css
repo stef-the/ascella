@@ -1,0 +1,8 @@
+
+
+.tnav a:first-child {margin-left: 5vw;}
+.tnav a:last-child {margin-right: 0;}
+.tnav a {
+    margin-right: 0.5em;
+    margin-top: 1em;
+}

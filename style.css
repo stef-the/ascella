@@ -1,0 +1,164 @@
+:root {
+    --clr-neon-0: #16f1b0;
+    --clr-neon-1: rgb(195, 37, 209);
+    --clr-bg: #39393f;
+}
+
+html {overflow: hidden;}
+
+
+body.start {place-items: center !important;}
+body {
+    place-items: middle;
+    min-height: 100vh;
+    display: grid;
+    background: var(--clr-bg);
+    font-family: "Balsamiq Sans";
+    color: var(--clr-neon-0);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-neon-1);
+    text-shadow: 
+        0 0 .125em hsl(0 0% 100% / .3),
+        0 0 .25em var(--clr-neon-1);
+}
+
+.title {
+    margin: 1em 0 0.2em 0;
+    padding-left: 5vw;
+    text-shadow: 
+        0 0 .125em hsl(0 0% 100% / .3),
+        0 0 .25em var(--clr-neon-0);
+    color: var(--clr-neon-0);
+    font-size: 2em;
+}
+.subtitle {
+    margin: 0 0 0.5em 0;
+    padding-left: 5vw;
+    text-shadow: 
+        0 0 .1em hsl(0 0% 100% / .3),
+        0 0 .2em var(--clr-neon-0);
+    color: var(--clr-neon-0);
+    font-size: 1.5em;
+}
+
+
+.neon-button {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon-0);
+    border: var(--clr-neon-0) .125em solid;
+    padding: 0.25em 1em;
+    border-radius: .25em;
+    text-shadow: 
+        0 0 .125em hsl(0 0% 100% / .3),
+        0 0 .25em var(--clr-neon-0);
+    box-shadow: 
+        inset 0 0 .75em var(--clr-neon-0),
+        0 0 .75em var(--clr-neon-0);
+    position: relative;
+    transition: 100ms linear;
+}
+
+#btn-0.neon-button {
+    font-size: 4rem;
+    width: 5.5em;
+    justify-content: center;
+    display: flex;
+}
+#btn-0.neon-button::before,
+.neon-button::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    transition: 100ms linear;
+}
+
+#btn-0.neon-button::before {
+    background: var(--clr-neon-0);
+    filter: blur(1em);
+    opacity: 0.8;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2em) rotateX(40deg) translateZ(0.5em) scale(1, 0.5);
+}
+
+.neon-button::after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon-0);
+    opacity: 0;
+    transition: 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    background: var(--clr-neon-0);
+    color: var(--clr-bg);
+    text-shadow: 0;
+}
+
+.neon-button .intro::before {
+    content: "Ascella.host";
+}
+.neon-button:hover .intro::before,
+.neon-button:focus .intro::before {
+    content: "";
+}
+
+.neon-button:hover .intro::after,
+.neon-button:focus .intro::after{
+    content: "GO";
+}
+
+#btn-0.neon-button:hover::before,
+#btn-0.neon-button:focus::before {
+    transform: perspective(2em) rotateX(40deg) translateZ(0.5em) scale(1.1, 0.6);
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+
+
+.btn-0-up {
+    animation: fly-out ease-in .5s forwards;
+}
+@keyframes fly-out {
+    0% {
+        transform: translateY(0);
+        box-shadow: 
+            inset 0 0 .75em var(--clr-neon-0),
+            0 0 .75em var(--clr-neon-0);
+    }
+    75% {
+        box-shadow: 
+            inset 0 0 .25em var(--clr-neon-0),
+            0 0 .25em var(--clr-neon-0);
+        }
+    100% {transform: translateY(-100vh);}
+}
+
+.btn-0-up.neon-button::before {
+    animation: fly-out-before ease-in .5s;
+}
+@keyframes fly-out-before {
+    0% {opacity: 0.8;}
+    10% {opacity: 0.2;}
+    20% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.btn-0-up.neon-button::after {
+    animation: fly-out-before ease-in .5s;
+}
+
