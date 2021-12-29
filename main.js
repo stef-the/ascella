@@ -18,17 +18,31 @@ function btn() {
         var subwelcome = '<p class="subtitle welcome" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
 
         container.innerHTML += welcome + subwelcome;
-        container.appendChild(points)
-        points.classList.add('center-flex')
+        container.appendChild(points);
+        points.classList.add('center-flex');
         points.innerHTML += makeBox(
             'Customization', 
             'Make your images your own. Apply filters, add embeds, and more from the <a href="">dashboard</a> or using our Discord bot.', 
             'https://www.ascella.host/domains.png',
-            '1000')
+            '1000'
+        );
         points.innerHTML += makeBox(
             'Domains', 
             'Choose from a variety of custom domains to host your images. You can always change later from the <a href="">dashboard</a> or using our bot.', 
             'https://www.ascella.host/domains.png',
-            '1100')
+            '1100'
+        );
+        points.innerHTML += makeBox(
+            'Dashboard',
+            'A simple dashboard to modify your domain, make URL redirects, and customize your images.',
+            'https://www.ascella.host/dashboard.png',
+            '1200'
+        );
+        points.innerHTML += makeBox(
+            'What are you waiting for?',
+            'To get started, join our <a href="">Discord</a>, get a code and redeem it with our bot. It\'s that easy!',
+            'redeem.png',
+            '1300'
+        )
     }, 1000);
 }

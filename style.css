@@ -67,6 +67,7 @@ a {
     padding: 1em 1em 0 1em;
     transition: 100ms linear;
 }
+.pointbox img {max-width: 100%;}
 
 .pointbox:hover,
 .pointbox:focus {
