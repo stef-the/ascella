@@ -8,7 +8,7 @@ function btn() {
         body.classList.remove('start')
         var [container, points] = [document.createElement('div'), document.createElement('div')]
         container.classList.add('container');
-        container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a><p class="title inline" style="margin-left: 0.5em; justify-self: right;" data-aos="fade-left" data-aos-delay="300">Ascella.host</p></div>';
+        container.innerHTML = '<div class="tnav"><a href="" class="neon-button" data-aos="fade-left">Dashboard</a><a href="https://discord.gg/XsmMzqs9Gs" target="_blank" class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a><p class="title inline" style="margin-left: 0.5em; justify-self: right;" data-aos="fade-left" data-aos-delay="300">Ascella.host</p></div>';
         body.append(container);
         var welcome = '<p class="title welcome" data-aos="fade-left" data-aos-delay="500">Welcome to the Ascella Uploader</p>'
         var subwelcome = '<p class="subtitle welcome" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
@@ -33,7 +33,7 @@ function btn() {
             '1200'
         ) + makeBox(
             'What are you waiting for?',
-            'To get started, join our <a href="">Discord</a>, get a code and redeem it with our bot. It\'s that easy!',
+            'To get started, join our <a href="https://discord.gg/XsmMzqs9Gs">Discord</a>, get a code and redeem it with our bot. It\'s that easy!',
             'redeem.png',
             '1300'
         )

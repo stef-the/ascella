@@ -24,6 +24,8 @@ a {
     text-shadow: 
         0 0 .125em hsl(0 0% 100% / .3),
         0 0 .25em var(--clr-neon-1);
+    cursor: pointer;
+    pointer-events: visible;
 }
 
 .center-flex {
@@ -44,6 +46,7 @@ a {
     color: var(--clr-neon-0);
     font-size: 2rem;
 }
+
 .subtitle {
     pointer-events: none;
     margin: 0 0 0.5em 0;
@@ -67,6 +70,7 @@ a {
     padding: 1em 1em 0 1em;
     transition: 100ms linear;
 }
+
 .pointbox img {max-width: 100%;}
 
 .pointbox:hover,
@@ -84,7 +88,6 @@ a {
     color: var(--clr-bg);
     text-shadow: 0;
 }
-
 
 .neon-button {
     display: inline-block;
