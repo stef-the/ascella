@@ -1,4 +1,9 @@
-function addClassName0() {
+function makeBox(title, description, imagelink, delay) {
+    const output = `<div class="pointbox" data-aos="fade-left" data-aos-delay="${delay}"><img src="${imagelink}""></img><p class="title">${title}</p><p class="subtitle">${description}</p></div>`
+    return(output)
+};
+
+function btn() {
     document.getElementById('btn-0').classList.add('btn-0-up');
     setTimeout(function () {
         console.log("done");
@@ -9,8 +14,19 @@ function addClassName0() {
         container.classList.add('container');
         container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a></div>';
         body.append(container);
-        var welcome = '<p class="title" data-aos="fade-left" data-aos-delay="500">Welcome to the Ascella Uploader</p>'
-        var subwelcome = '<p class="subtitle" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
+        var welcome = '<p class="title welcome" data-aos="fade-left" data-aos-delay="500">Welcome to the Ascella Uploader</p>'
+        var subwelcome = '<p class="subtitle welcome" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
+
         container.innerHTML += welcome + subwelcome;
+        container.innerHTML += makeBox(
+            'Customization', 
+            'Make your images your own. Apply filters, add embeds, and more from the <a href="">dashboard</a> or using our Discord bot.', 
+            'https://www.ascella.host/domains.png',
+            '1000')
+        container.innerHTML += makeBox(
+            'Domains', 
+            'Choose from a variety of custom domains to host your images. You can always change later from the <a href="">dashboard</a> or using our bot.', 
+            'https://www.ascella.host/domains.png',
+            '1100')
     }, 1000);
 }

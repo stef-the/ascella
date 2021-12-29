@@ -4,9 +4,11 @@
     --clr-bg: #39393f;
 }
 
-html {overflow: hidden;}
+body.start {
+    place-items: center !important;
+    overflow: hidden;
+}
 
-body.start {place-items: center !important;}
 body {
     place-items: middle;
     min-height: 100vh;
@@ -24,9 +26,12 @@ a {
         0 0 .25em var(--clr-neon-1);
 }
 
+.title.welcome {margin-top: 0.5em;}
+.welcome {padding-left: 5vw;}
+
 .title {
-    margin: 1em 0 0.2em 0;
-    padding-left: 5vw;
+    pointer-events: none;
+    margin: 0 0 0.2em 0;
     text-shadow: 
         0 0 .125em hsl(0 0% 100% / .3),
         0 0 .25em var(--clr-neon-0);
@@ -34,13 +39,44 @@ a {
     font-size: 2em;
 }
 .subtitle {
+    pointer-events: none;
     margin: 0 0 0.5em 0;
-    padding-left: 5vw;
     text-shadow: 
         0 0 .1em hsl(0 0% 100% / .3),
         0 0 .2em var(--clr-neon-0);
     color: var(--clr-neon-0);
     font-size: 1.5em;
+}
+
+.pointbox {
+    color: var(--clr-neon-0);
+    box-shadow: 
+        inset 0 0 .75em var(--clr-neon-0),
+        0 0 .75em var(--clr-neon-0);
+    margin: 1em;
+    border: var(--clr-neon-0) 0.3em solid;
+    border-radius: .6em;
+    padding: 1em 1em 0 1em;
+    transition: 100ms linear;
+}
+
+.pointbox:hover,
+.pointbox:focus {
+    background: var(--clr-neon-0);
+    color: var(--clr-bg);
+    text-shadow: 0;
+    box-shadow: 
+        inset 0 0 3em var(--clr-neon-0),
+        0 0 3em var(--clr-neon-0);
+}
+
+.pointbox:hover .title,
+.pointbox:focus .title,
+.pointbox:hover .subtitle,
+.pointbox:focus .subtitle{
+    background: var(--clr-neon-0);
+    color: var(--clr-bg);
+    text-shadow: 0;
 }
 
 
