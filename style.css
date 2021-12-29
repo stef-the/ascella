@@ -26,6 +26,12 @@ a {
         0 0 .25em var(--clr-neon-1);
 }
 
+.center-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.inline {display: inline;}
 .title.welcome {margin-top: 0.5em;}
 .welcome {padding-left: 5vw;}
 
@@ -36,7 +42,7 @@ a {
         0 0 .125em hsl(0 0% 100% / .3),
         0 0 .25em var(--clr-neon-0);
     color: var(--clr-neon-0);
-    font-size: 2em;
+    font-size: 2rem;
 }
 .subtitle {
     pointer-events: none;
@@ -45,10 +51,12 @@ a {
         0 0 .1em hsl(0 0% 100% / .3),
         0 0 .2em var(--clr-neon-0);
     color: var(--clr-neon-0);
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .pointbox {
+    display: inline-block;
+    max-width: 47em;
     color: var(--clr-neon-0);
     box-shadow: 
         inset 0 0 .75em var(--clr-neon-0),
@@ -65,9 +73,6 @@ a {
     background: var(--clr-neon-0);
     color: var(--clr-bg);
     text-shadow: 0;
-    box-shadow: 
-        inset 0 0 3em var(--clr-neon-0),
-        0 0 3em var(--clr-neon-0);
 }
 
 .pointbox:hover .title,

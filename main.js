@@ -10,20 +10,22 @@ function btn() {
         var body = document.getElementsByTagName('body')[0]
         body.removeChild(document.getElementById('btn-0'))
         body.classList.remove('start')
-        var container = document.createElement('div')
+        var [container, points] = [document.createElement('div'), document.createElement('div')]
         container.classList.add('container');
-        container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a></div>';
+        container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a><p class="title inline" style="margin-left: 0.5em;" data-aos="fade-left" data-aos-delay="300">Ascella.host</p></div>';
         body.append(container);
         var welcome = '<p class="title welcome" data-aos="fade-left" data-aos-delay="500">Welcome to the Ascella Uploader</p>'
         var subwelcome = '<p class="subtitle welcome" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
 
         container.innerHTML += welcome + subwelcome;
-        container.innerHTML += makeBox(
+        container.appendChild(points)
+        points.classList.add('center-flex')
+        points.innerHTML += makeBox(
             'Customization', 
             'Make your images your own. Apply filters, add embeds, and more from the <a href="">dashboard</a> or using our Discord bot.', 
             'https://www.ascella.host/domains.png',
             '1000')
-        container.innerHTML += makeBox(
+        points.innerHTML += makeBox(
             'Domains', 
             'Choose from a variety of custom domains to host your images. You can always change later from the <a href="">dashboard</a> or using our bot.', 
             'https://www.ascella.host/domains.png',
