@@ -25,20 +25,17 @@ function btn() {
             'Make your images your own. Apply filters, add embeds, and more from the <a href="">dashboard</a> or using our Discord bot.', 
             'https://www.ascella.host/domains.png',
             '1000'
-        );
-        points.innerHTML += makeBox(
+        ) + makeBox(
             'Domains', 
             'Choose from a variety of custom domains to host your images. You can always change later from the <a href="">dashboard</a> or using our bot.', 
             'https://www.ascella.host/domains.png',
             '1100'
-        );
-        points.innerHTML += makeBox(
+        ) + makeBox(
             'Dashboard',
             'A simple dashboard to modify your domain, make URL redirects, and customize your images.',
             'https://www.ascella.host/dashboard.png',
             '1200'
-        );
-        points.innerHTML += makeBox(
+        ) + makeBox(
             'What are you waiting for?',
             'To get started, join our <a href="">Discord</a>, get a code and redeem it with our bot. It\'s that easy!',
             'redeem.png',
