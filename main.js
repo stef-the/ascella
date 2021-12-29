@@ -1,8 +1,4 @@
-function makeBox(title, description, imagelink, delay) {
-    const output = `<div class="pointbox" data-aos="fade-left" data-aos-delay="${delay}"><img src="${imagelink}""></img><p class="title">${title}</p><p class="subtitle">${description}</p></div>`
-    return(output)
-};
-
+function makeBox(title, description, imagelink, delay) {return(`<div class="pointbox" data-aos="fade-left" data-aos-delay="${delay}"><img src="${imagelink}""></img><p class="title">${title}</p><p class="subtitle">${description}</p></div>`)};
 function btn() {
     document.getElementById('btn-0').classList.add('btn-0-up');
     setTimeout(function () {
@@ -12,7 +8,7 @@ function btn() {
         body.classList.remove('start')
         var [container, points] = [document.createElement('div'), document.createElement('div')]
         container.classList.add('container');
-        container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a><p class="title inline" style="margin-left: 0.5em;" data-aos="fade-left" data-aos-delay="300">Ascella.host</p></div>';
+        container.innerHTML = '<div class="tnav"><a class="neon-button" data-aos="fade-left">Dashboard</a><a class="neon-button" data-aos="fade-left" data-aos-delay="100">Discord</a><p class="title inline" style="margin-left: 0.5em; justify-self: right;" data-aos="fade-left" data-aos-delay="300">Ascella.host</p></div>';
         body.append(container);
         var welcome = '<p class="title welcome" data-aos="fade-left" data-aos-delay="500">Welcome to the Ascella Uploader</p>'
         var subwelcome = '<p class="subtitle welcome" data-aos="fade-left" data-aos-delay="650">Looking to score an invite? Join the <a href="https://discord.gg/XsmMzqs9Gs" target="_blank">Discord</a>.</p>'
